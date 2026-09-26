@@ -1,55 +1,34 @@
 import { useReveal } from '@/hooks/useReveal';
-import {
-  Code2,
-  Palette,
-  Globe,
-  Wrench,
-  Smartphone,
-  ShoppingCart,
-} from 'lucide-react';
+import { Code2, Globe, Cpu, Wrench } from 'lucide-react';
 
 const services = [
   {
-    icon: Palette,
-    title: 'Website Design',
-    description:
-      'Bespoke, conversion-focused design systems that make your brand unmistakable online.',
-    points: ['Brand-aligned visual systems', 'Conversion-optimized layouts', 'Design system documentation'],
-  },
-  {
+    number: '01',
     icon: Code2,
-    title: 'Web Development',
+    title: 'Website Design & Development',
     description:
-      'Production-grade builds with modern frameworks, fast load times, and clean, scalable code.',
-    points: ['React / Next.js / TypeScript', 'Edge-deployed performance', 'SEO-optimized architecture'],
+      'Bespoke digital architecture engineered from concept to launch. We create modern, responsive websites with precise typography, uncompromising performance, and purposeful brand identity.',
   },
   {
+    number: '02',
     icon: Globe,
     title: 'Digital Presence',
     description:
-      'A cohesive presence across search, social, and web that positions you as the obvious choice.',
-    points: ['SEO & analytics setup', 'Social media integration', 'Content strategy'],
+      'Strategic presentation that establishes undeniable market authority. Clean search optimization, technical discoverability, and cohesive visual touchpoints that reflect your standards.',
   },
   {
-    icon: ShoppingCart,
+    number: '03',
+    icon: Cpu,
     title: 'Custom Digital Solutions',
     description:
-      'Tailored platforms, dashboards, and integrations built around how your business actually works.',
-    points: ['Custom web applications', 'API & third-party integrations', 'Internal tooling'],
+      'Tailored web applications, client portals, and bespoke integrations built to solve specific operational requirements with scalable, maintainable engineering.',
   },
   {
-    icon: Smartphone,
-    title: 'Responsive Experiences',
-    description:
-      'Every interface is engineered to feel native on mobile, tablet, and desktop from day one.',
-    points: ['Mobile-first design', 'Cross-device testing', 'Progressive enhancement'],
-  },
-  {
+    number: '04',
     icon: Wrench,
     title: 'Website Maintenance',
     description:
-      'Ongoing care, updates, and improvements so your site stays fast, secure, and current.',
-    points: ['Performance monitoring', 'Security updates', 'Content & feature iterations'],
+      'Structured technical care, security management, performance monitoring, and continuous improvements to keep your digital platform resilient, fast, and up to date.',
   },
 ];
 
@@ -62,21 +41,20 @@ export function Services() {
         {/* Section header */}
         <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''} max-w-3xl mb-16 lg:mb-24`}>
           <span className="text-xs text-[#7c3aed] tracking-[0.2em] uppercase font-medium">
-            What We Do
+            Services
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-700 mt-4 tracking-tight text-balance">
-            Services built for
+            Focused capabilities.
             <br />
-            <span className="text-neutral-500">serious digital work.</span>
+            <span className="text-neutral-500">Built with technical discipline.</span>
           </h2>
           <p className="mt-6 text-lg text-neutral-400 leading-relaxed">
-            From first concept to ongoing maintenance, we cover the full spectrum
-            of what a modern business needs to succeed online.
+            We focus exclusively on the core disciplines required to design, engineer, and maintain high-standard digital products.
           </p>
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1a1a1a] border border-[#1a1a1a] rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service, i) => (
             <ServiceCard key={service.title} service={service} index={i} />
           ))}
@@ -99,33 +77,33 @@ function ServiceCard({
   return (
     <div
       ref={ref}
-      className={`reveal ${isVisible ? 'is-visible' : ''} group relative bg-[#0A0A0A] p-8 lg:p-10 card-hover`}
-      style={{ transitionDelay: `${(index % 3) * 80}ms` }}
+      className={`reveal ${isVisible ? 'is-visible' : ''} group relative bg-[#0A0A0A] border border-[#1a1a1a] hover:border-[#2a2a2a] rounded-2xl p-8 lg:p-10 card-hover flex flex-col justify-between`}
+      style={{ transitionDelay: `${(index % 2) * 100}ms` }}
     >
-      <div className="flex items-start justify-between mb-6">
-        <div className="w-12 h-12 rounded-xl bg-[#111] border border-[#1a1a1a] flex items-center justify-center group-hover:border-[#7c3aed]/30 transition-colors duration-400">
-          <Icon size={20} className="text-neutral-300 group-hover:text-white transition-colors" />
+      <div>
+        <div className="flex items-start justify-between mb-8">
+          <div className="w-12 h-12 rounded-xl bg-[#111] border border-[#1a1a1a] flex items-center justify-center group-hover:border-[#7c3aed]/40 transition-colors duration-300">
+            <Icon size={20} className="text-neutral-300 group-hover:text-white transition-colors" />
+          </div>
+          <span className="text-xs font-mono text-neutral-500 font-display tabular-nums tracking-widest">
+            {service.number}
+          </span>
         </div>
-        <span className="text-xs text-neutral-700 font-display tabular-nums">
-          0{index + 1}
-        </span>
+
+        <h3 className="font-display text-2xl font-600 mb-4 tracking-tight text-white">
+          {service.title}
+        </h3>
+        <p className="text-sm text-neutral-400 leading-relaxed">
+          {service.description}
+        </p>
       </div>
 
-      <h3 className="font-display text-xl font-600 mb-3 tracking-tight">
-        {service.title}
-      </h3>
-      <p className="text-sm text-neutral-400 leading-relaxed mb-6">
-        {service.description}
-      </p>
-
-      <ul className="space-y-2">
-        {service.points.map((point) => (
-          <li key={point} className="flex items-center gap-2 text-xs text-neutral-500">
-            <span className="w-1 h-1 rounded-full bg-[#7c3aed]" />
-            {point}
-          </li>
-        ))}
-      </ul>
+      <div className="mt-8 pt-6 border-t border-[#141414] flex items-center gap-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#7c3aed]" />
+        <span className="text-xs text-neutral-500 uppercase tracking-wider font-mono">
+          Core Capability
+        </span>
+      </div>
     </div>
   );
 }

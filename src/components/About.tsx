@@ -2,10 +2,11 @@ import { useReveal } from '@/hooks/useReveal';
 import { Check } from 'lucide-react';
 
 const principles = [
-  'Design is a business tool, not decoration',
-  'Speed and accessibility are non-negotiable',
-  'Every decision is backed by a reason',
-  'We build for longevity, not trends',
+  'Purposeful design tailored to client objectives',
+  'Technical execution with clean, modern codebases',
+  'Clean digital experiences without clutter',
+  'Meticulous attention to detail and typography',
+  'Building strictly around the client\'s actual needs',
 ];
 
 export function About() {
@@ -18,28 +19,28 @@ export function About() {
           {/* Left */}
           <div>
             <span className="text-xs text-[#7c3aed] tracking-[0.2em] uppercase font-medium">
-              The Studio
+              About Vanta Studios
             </span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-700 mt-4 tracking-tight text-balance">
-              A small studio
+              A focused studio
               <br />
-              <span className="text-neutral-500">with high standards.</span>
+              <span className="text-neutral-500">committed to quality.</span>
             </h2>
           </div>
 
           {/* Right */}
           <div className="space-y-6">
             <p className="text-lg text-neutral-300 leading-relaxed">
-              Vanta Studios is a digital studio that treats every project like
-              it's our own. We're small by design — it means you work directly
-              with the people building your product, not a layer of account
-              managers.
+              Vanta Studios is a small, serious digital studio dedicated to
+              designing and engineering premium websites and digital solutions.
+              We operate without bloat, allowing you to collaborate directly with
+              the specialists building your product.
             </p>
             <p className="text-base text-neutral-400 leading-relaxed">
-              We believe AI is a powerful tool for development and research, but
-              it's not the product. The product is the finished digital
-              experience we deliver to you — and it should feel like it was built
-              with care, precision, and intent.
+              We combine design precision with disciplined engineering to create
+              digital presence that stands apart. We leverage modern tooling
+              internally to accelerate build cycles, while ensuring the end product
+              is durable, fast, and distinctly human in craftsmanship.
             </p>
 
             <div className="pt-4 space-y-3">

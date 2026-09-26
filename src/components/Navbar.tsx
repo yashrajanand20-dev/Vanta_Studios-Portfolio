@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Logo } from './Logo';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Services', href: '#services' },
   { label: 'Work', href: '#work' },
+  { label: 'Services', href: '#services' },
   { label: 'Process', href: '#process' },
   { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
 ];
 
 export function Navbar() {
@@ -25,12 +24,12 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-black/80 backdrop-blur-xl border-b border-[#1a1a1a]'
+            ? 'bg-black/85 backdrop-blur-xl border-b border-[#1a1a1a]'
             : 'bg-transparent border-b border-transparent'
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-          <a href="#top" className="flex items-center group">
+          <a href="#top" className="flex items-center group" aria-label="Vanta Studios home">
             <Logo />
           </a>
 
@@ -48,10 +47,13 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <a
-              href="#contact"
-              className="text-sm font-medium text-white border border-[#2a2a2a] hover:border-[#3a3a3a] px-5 py-2 rounded-full transition-all duration-300 hover:bg-[#111]"
+              href="https://tally.so/r/445poX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-white border border-[#2a2a2a] hover:border-[#3a3a3a] px-5 py-2 rounded-full transition-all duration-300 hover:bg-[#111] group"
             >
               Start a Project
+              <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-neutral-400 group-hover:text-white" />
             </a>
           </div>
 
@@ -71,7 +73,7 @@ export function Navbar() {
           menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
-        <div className="flex flex-col items-center justify-center h-full gap-8">
+        <div className="flex flex-col items-center justify-center h-full gap-8 px-6 text-center">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -83,11 +85,14 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="https://tally.so/r/445poX"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
-            className="text-lg font-medium text-white border border-[#2a2a2a] px-8 py-3 rounded-full mt-4"
+            className="inline-flex items-center gap-2 text-base font-medium text-black bg-white hover:bg-neutral-200 px-8 py-3.5 rounded-full mt-4 transition-colors"
           >
             Start a Project
+            <ArrowUpRight size={16} />
           </a>
         </div>
       </div>

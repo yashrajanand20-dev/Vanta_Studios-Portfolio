@@ -2,15 +2,15 @@ import { ArrowUpRight } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen flex items-center overflow-hidden pt-16">
+    <section id="top" className="relative min-h-[92vh] flex items-center overflow-hidden pt-20 pb-16">
       {/* Background grid */}
       <div className="absolute inset-0 grid-bg opacity-40" />
 
-      {/* Radial glow */}
+      {/* Subtle radial glow */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-20 pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full opacity-15 pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, rgba(124,58,237,0.3) 0%, transparent 60%)',
+          background: 'radial-gradient(circle, rgba(124,58,237,0.25) 0%, transparent 65%)',
         }}
       />
 
@@ -25,13 +25,13 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75 animate-ping" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
-            <span className="text-xs text-neutral-400 tracking-wider uppercase">
-              Available for new projects — Q4 2026
+            <span className="text-xs text-neutral-400 tracking-wider uppercase font-medium">
+              Available for new projects
             </span>
           </div>
 
           {/* Main heading */}
-          <h1 className="font-display text-[clamp(2.5rem,8vw,6.5rem)] font-700 leading-[0.95] tracking-tight text-balance animate-fade-up delay-100">
+          <h1 className="font-display text-[clamp(2.75rem,8vw,6.5rem)] font-700 leading-[0.95] tracking-tight text-balance animate-fade-up delay-100">
             Your Vision,
             <br />
             <span className="text-gradient">Digitally Built.</span>
@@ -41,13 +41,15 @@ export function Hero() {
           <p className="mt-8 text-lg md:text-xl text-neutral-400 max-w-2xl leading-relaxed animate-fade-up delay-300">
             Vanta Studios is a digital studio crafting premium websites, custom
             digital solutions, and brand-defining online experiences for
-            companies that expect more.
+            businesses that expect more.
           </p>
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-up delay-500">
             <a
-              href="#contact"
+              href="https://tally.so/r/445poX"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary group inline-flex items-center justify-center gap-2 bg-white text-black px-7 py-3.5 rounded-full font-medium text-sm hover:bg-neutral-200 transition-colors"
             >
               Start a Project
@@ -55,17 +57,17 @@ export function Hero() {
             </a>
             <a
               href="#work"
-              className="inline-flex items-center justify-center gap-2 text-sm text-neutral-300 hover:text-white px-7 py-3.5 rounded-full border border-[#2a2a2a] hover:border-[#3a3a3a] transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 text-sm text-neutral-300 hover:text-white px-7 py-3.5 rounded-full border border-[#2a2a2a] hover:border-[#3a3a3a] transition-all duration-300 hover:bg-[#0d0d0d]"
             >
-              View Our Work
+              View Work
             </a>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-6 lg:left-10 hidden md:flex items-center gap-3 animate-fade-in delay-700">
-          <div className="w-px h-12 bg-gradient-to-b from-transparent via-neutral-600 to-transparent" />
-          <span className="text-xs text-neutral-500 tracking-wider uppercase rotate-90 origin-left translate-y-8">
+        <div className="absolute bottom-8 left-6 lg:left-10 hidden md:flex items-center gap-3 animate-fade-in delay-700">
+          <div className="w-px h-10 bg-gradient-to-b from-transparent via-neutral-600 to-transparent" />
+          <span className="text-xs text-neutral-500 tracking-wider uppercase rotate-90 origin-left translate-y-7">
             Scroll
           </span>
         </div>

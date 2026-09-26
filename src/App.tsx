@@ -1,9 +1,8 @@
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Marquee } from '@/components/Marquee';
-import { Services } from '@/components/Services';
 import { Work } from '@/components/Work';
-import { Stats } from '@/components/Stats';
+import { Services } from '@/components/Services';
 import { Process } from '@/components/Process';
 import { About } from '@/components/About';
 import { Contact } from '@/components/Contact';
@@ -17,9 +16,8 @@ function App() {
       <main>
         <Hero />
         <Marquee />
-        <Services />
         <Work />
-        <Stats />
+        <Services />
         <Process />
         <About />
         <Contact />

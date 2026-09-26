@@ -1,38 +1,24 @@
 import { useReveal } from '@/hooks/useReveal';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Lumen Finance',
-    category: 'Web Design & Development',
-    description: 'A fintech platform redesign focused on trust, clarity, and conversion.',
-    image: 'https://images.pexels.com/photos/8903731/pexels-photo-8903731.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    tags: ['React', 'TypeScript', 'Supabase'],
-    year: '2026',
+    title: 'Apex Football Academy',
+    category: 'Sports / Education',
+    description:
+      'A modern football academy website designed around player development, competitive training, and a strong athletic identity.',
+    url: 'https://apex-football-academy.yashraj20.workers.dev/',
+    displayUrl: 'apex-football-academy.yashraj20.workers.dev',
+    badge: 'Selected Project 01',
   },
   {
-    title: 'Atelier Noir',
-    category: 'Digital Presence & Brand',
-    description: "A luxury fashion label's complete digital identity and e-commerce experience.",
-    image: 'https://images.pexels.com/photos/1069798/pexels-photo-1069798.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    tags: ['Next.js', 'Shopify', 'Design System'],
-    year: '2026',
-  },
-  {
-    title: 'Meridian Health',
-    category: 'Custom Digital Solution',
-    description: 'A patient portal and booking system that reduced no-shows by 40%.',
-    image: 'https://images.pexels.com/photos/6278761/pexels-photo-6278761.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    tags: ['React', 'Node.js', 'HIPAA'],
-    year: '2025',
-  },
-  {
-    title: 'Form & Function',
-    category: 'Website Maintenance',
-    description: 'Ongoing performance, security, and feature work for a design studio.',
-    image: 'https://images.pexels.com/photos/4006123/pexels-photo-4006123.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    tags: ['Maintenance', 'Performance', 'SEO'],
-    year: '2025',
+    title: 'NOIR',
+    category: 'Hospitality',
+    description:
+      'A sophisticated contemporary Indian restaurant website combining editorial presentation, premium visual direction, and a modern dining experience.',
+    url: 'https://noir-dining.yashraj20.workers.dev/',
+    displayUrl: 'noir-dining.yashraj20.workers.dev',
+    badge: 'Selected Project 02',
   },
 ];
 
@@ -43,27 +29,29 @@ export function Work() {
     <section id="work" className="relative py-28 lg:py-40 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
-        <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''} flex flex-col md:flex-row md:items-end justify-between mb-16 lg:mb-24 gap-6`}>
+        <div
+          ref={ref}
+          className={`reveal ${isVisible ? 'is-visible' : ''} flex flex-col md:flex-row md:items-end justify-between mb-16 lg:mb-24 gap-6`}
+        >
           <div className="max-w-2xl">
             <span className="text-xs text-[#7c3aed] tracking-[0.2em] uppercase font-medium">
               Selected Work
             </span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-700 mt-4 tracking-tight text-balance">
-              Projects we're
+              Engineered for
               <br />
-              <span className="text-neutral-500">proud to have shipped.</span>
+              <span className="text-neutral-500">digital distinction.</span>
             </h2>
           </div>
-          <p className="text-sm text-neutral-500 max-w-xs">
-            A selection of recent engagements across fintech, fashion,
-            healthcare, and design.
+          <p className="text-sm text-neutral-400 max-w-xs leading-relaxed">
+            Explore our featured client websites live in production.
           </p>
         </div>
 
-        {/* Projects */}
-        <div className="space-y-6 lg:space-y-8">
+        {/* Projects list */}
+        <div className="space-y-10 lg:space-y-12">
           {projects.map((project, i) => (
-            <ProjectRow key={project.title} project={project} index={i} />
+            <ProjectCard key={project.title} project={project} index={i} />
           ))}
         </div>
       </div>
@@ -71,7 +59,7 @@ export function Work() {
   );
 }
 
-function ProjectRow({
+function ProjectCard({
   project,
   index,
 }: {
@@ -84,52 +72,99 @@ function ProjectRow({
   return (
     <div
       ref={ref}
-      className={`reveal ${isVisible ? 'is-visible' : ''} group grid lg:grid-cols-2 gap-6 lg:gap-12 items-center ${
-        isReversed ? 'lg:[&>*:first-child]:order-2' : ''
-      }`}
-      style={{ transitionDelay: `${(index % 2) * 100}ms` }}
+      className={`reveal ${isVisible ? 'is-visible' : ''} group bg-[#0A0A0A] border border-[#1a1a1a] hover:border-[#2a2a2a] rounded-2xl p-6 lg:p-10 transition-all duration-500`}
     >
-      {/* Image */}
-      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#0A0A0A] border border-[#1a1a1a] group-hover:border-[#2a2a2a] transition-colors duration-500">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        <div className="absolute bottom-4 left-4 flex gap-2">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-[10px] uppercase tracking-wider text-neutral-300 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
+      <div
+        className={`grid lg:grid-cols-12 gap-8 lg:gap-12 items-center ${
+          isReversed ? 'lg:[&>*:first-child]:order-2' : ''
+        }`}
+      >
+        {/* Visual Preview Container */}
+        <div className="lg:col-span-7">
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block relative aspect-[16/10] rounded-xl overflow-hidden bg-[#000000] border border-[#1f1f1f] group/preview"
+          >
+            {/* Window bar */}
+            <div className="h-9 bg-[#111111] border-b border-[#1f1f1f] px-4 flex items-center justify-between text-xs text-neutral-400">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]" />
+              </div>
+              <div className="font-mono text-[11px] text-neutral-400 truncate max-w-[200px] sm:max-w-xs">
+                {project.displayUrl}
+              </div>
+              <ExternalLink size={12} className="text-neutral-400 group-hover/preview:text-white transition-colors" />
+            </div>
 
-      {/* Content */}
-      <div className="space-y-4">
-        <div className="flex items-center gap-3 text-xs text-neutral-500">
-          <span className="text-[#7c3aed]">{project.category}</span>
-          <span>—</span>
-          <span>{project.year}</span>
+            {/* Preview Body */}
+            <div className="relative w-full h-[calc(100%-2.25rem)] flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-[#0c0c0d] to-[#040404]">
+              <div
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 border"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                  borderColor: 'rgba(255, 255, 255, 0.1)',
+                }}
+              >
+                <span className="font-display font-bold text-lg text-white">
+                  {project.title.charAt(0)}
+                </span>
+              </div>
+              <span className="text-xs font-mono uppercase tracking-widest text-[#7c3aed] mb-1">
+                {project.category}
+              </span>
+              <h4 className="font-display text-2xl font-600 text-white mb-3">
+                {project.title}
+              </h4>
+              <p className="text-xs text-neutral-400 max-w-sm line-clamp-2 mb-4">
+                {project.description}
+              </p>
+              <div className="inline-flex items-center gap-2 text-xs font-medium text-white bg-[#1a1a1a] group-hover/preview:bg-white group-hover/preview:text-black px-4 py-2 rounded-full transition-all duration-300">
+                Visit live website
+                <ArrowUpRight size={13} />
+              </div>
+            </div>
+          </a>
         </div>
-        <h3 className="font-display text-3xl lg:text-4xl font-700 tracking-tight group-hover:text-white transition-colors">
-          {project.title}
-        </h3>
-        <p className="text-base text-neutral-400 leading-relaxed max-w-md">
-          {project.description}
-        </p>
-        <a
-          href="#contact"
-          className="inline-flex items-center gap-1.5 text-sm text-neutral-300 hover:text-white transition-colors group/link"
-        >
-          View case study
-          <ArrowUpRight size={14} className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-        </a>
+
+        {/* Project Details */}
+        <div className="lg:col-span-5 space-y-5">
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-mono text-[#7c3aed] tracking-wider uppercase">
+              {project.badge}
+            </span>
+            <span className="text-neutral-700">—</span>
+            <span className="text-xs text-neutral-400 uppercase tracking-wider">
+              {project.category}
+            </span>
+          </div>
+
+          <h3 className="font-display text-3xl lg:text-4xl font-700 tracking-tight text-white">
+            {project.title}
+          </h3>
+
+          <p className="text-base text-neutral-400 leading-relaxed">
+            {project.description}
+          </p>
+
+          <div className="pt-2">
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-white border border-[#2a2a2a] hover:border-[#3a3a3a] px-6 py-2.5 rounded-full transition-all duration-300 hover:bg-[#141414] group/link"
+            >
+              Launch Website
+              <ArrowUpRight
+                size={14}
+                className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
