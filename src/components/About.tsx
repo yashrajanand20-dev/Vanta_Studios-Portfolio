@@ -1,12 +1,12 @@
 import { useReveal } from '@/hooks/useReveal';
-import { Check } from 'lucide-react';
+import { Check, Mail } from 'lucide-react';
 
 const principles = [
   'Purposeful design tailored to client objectives',
   'Technical execution with clean, modern codebases',
   'Clean digital experiences without clutter',
   'Meticulous attention to detail and typography',
-  'Building strictly around the client\'s actual needs',
+  "Building strictly around the client's actual needs",
 ];
 
 export function About() {
@@ -26,6 +26,17 @@ export function About() {
               <br />
               <span className="text-neutral-500">committed to quality.</span>
             </h2>
+
+            <div className="mt-8 inline-flex items-center gap-2 text-sm text-neutral-400 bg-[#0e0e10] border border-[#1f1f23] px-4 py-2.5 rounded-full">
+              <Mail size={14} className="text-[#7c3aed]" />
+              <span>Studio Inquiries:</span>
+              <a
+                href="mailto:yashrajanand20@gmail.com"
+                className="text-neutral-200 hover:text-white transition-colors underline font-medium"
+              >
+                yashrajanand20@gmail.com
+              </a>
+            </div>
           </div>
 
           {/* Right */}

@@ -34,10 +34,10 @@ export function Contact() {
               <div className="flex items-center justify-between py-3.5 border-b border-[#1a1a1a]">
                 <span className="text-xs text-neutral-500 uppercase tracking-wider font-mono">Official Email</span>
                 <a
-                  href="mailto:yashrajand20@gmail.com"
+                  href="mailto:yashrajanand20@gmail.com"
                   className="text-sm text-neutral-200 hover:text-white transition-colors"
                 >
-                  yashrajand20@gmail.com
+                  yashrajanand20@gmail.com
                 </a>
               </div>
               <div className="flex items-center justify-between py-3.5 border-b border-[#1a1a1a]">
@@ -82,7 +82,7 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="mailto:yashrajand20@gmail.com"
+                  href="mailto:yashrajanand20@gmail.com"
                   className="inline-flex items-center justify-center gap-2 text-sm text-neutral-300 hover:text-white px-6 py-3.5 rounded-full border border-[#2a2a2a] hover:border-[#3a3a3a] transition-all duration-300 hover:bg-[#111]"
                 >
                   <Mail size={15} />

@@ -7,8 +7,9 @@ const projects = [
     category: 'Sports / Education',
     description:
       'A modern football academy website designed around player development, competitive training, and a strong athletic identity.',
-    url: 'https://apex-football-academy.yashraj20.workers.dev/',
-    displayUrl: 'apex-football-academy.yashraj20.workers.dev',
+    url: 'https://apex-football-academy.yashrajan20.workers.dev/',
+    displayUrl: 'apex-football-academy.yashrajan20.workers.dev',
+    image: '/apex.webp',
     badge: 'Selected Project 01',
   },
   {
@@ -16,8 +17,9 @@ const projects = [
     category: 'Hospitality',
     description:
       'A sophisticated contemporary Indian restaurant website combining editorial presentation, premium visual direction, and a modern dining experience.',
-    url: 'https://noir-dining.yashraj20.workers.dev/',
-    displayUrl: 'noir-dining.yashraj20.workers.dev',
+    url: 'https://noir-dining.yashrajan20.workers.dev/',
+    displayUrl: 'noir-dining.yashrajan20.workers.dev',
+    image: '/noir.webp',
     badge: 'Selected Project 02',
   },
 ];
@@ -49,7 +51,7 @@ export function Work() {
         </div>
 
         {/* Projects list */}
-        <div className="space-y-10 lg:space-y-12">
+        <div className="space-y-12 lg:space-y-16">
           {projects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}
@@ -85,14 +87,14 @@ function ProjectCard({
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block relative aspect-[16/10] rounded-xl overflow-hidden bg-[#000000] border border-[#1f1f1f] group/preview"
+            className="block relative aspect-[16/10] rounded-xl overflow-hidden bg-[#000000] border border-[#1f1f1f] group/preview shadow-2xl"
           >
             {/* Window bar */}
-            <div className="h-9 bg-[#111111] border-b border-[#1f1f1f] px-4 flex items-center justify-between text-xs text-neutral-400">
+            <div className="h-9 bg-[#111111] border-b border-[#1f1f1f] px-4 flex items-center justify-between text-xs text-neutral-400 z-10 relative">
               <div className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#2a2a2a]" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]/70" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]/70" />
+                <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]/70" />
               </div>
               <div className="font-mono text-[11px] text-neutral-400 truncate max-w-[200px] sm:max-w-xs">
                 {project.displayUrl}
@@ -100,30 +102,17 @@ function ProjectCard({
               <ExternalLink size={12} className="text-neutral-400 group-hover/preview:text-white transition-colors" />
             </div>
 
-            {/* Preview Body */}
-            <div className="relative w-full h-[calc(100%-2.25rem)] flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-[#0c0c0d] to-[#040404]">
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 border"
-                style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                  borderColor: 'rgba(255, 255, 255, 0.1)',
-                }}
-              >
-                <span className="font-display font-bold text-lg text-white">
-                  {project.title.charAt(0)}
-                </span>
-              </div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#7c3aed] mb-1">
-                {project.category}
-              </span>
-              <h4 className="font-display text-2xl font-600 text-white mb-3">
-                {project.title}
-              </h4>
-              <p className="text-xs text-neutral-400 max-w-sm line-clamp-2 mb-4">
-                {project.description}
-              </p>
-              <div className="inline-flex items-center gap-2 text-xs font-medium text-white bg-[#1a1a1a] group-hover/preview:bg-white group-hover/preview:text-black px-4 py-2 rounded-full transition-all duration-300">
-                Visit live website
+            {/* Screenshot Image with interactive overlay */}
+            <div className="relative w-full h-[calc(100%-2.25rem)] overflow-hidden bg-[#080808]">
+              <img
+                src={project.image}
+                alt={`${project.title} live screenshot`}
+                className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover/preview:scale-[1.03]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-60 group-hover/preview:opacity-20 transition-opacity duration-300" />
+              <div className="absolute bottom-4 right-4 inline-flex items-center gap-1.5 text-xs font-medium text-black bg-white px-3.5 py-1.5 rounded-full shadow-lg opacity-90 group-hover/preview:opacity-100 transition-opacity">
+                Live Site
                 <ArrowUpRight size={13} />
               </div>
             </div>
@@ -133,11 +122,11 @@ function ProjectCard({
         {/* Project Details */}
         <div className="lg:col-span-5 space-y-5">
           <div className="flex items-center gap-3">
-            <span className="text-xs font-mono text-[#7c3aed] tracking-wider uppercase">
+            <span className="text-xs font-mono text-[#7c3aed] tracking-wider uppercase font-medium">
               {project.badge}
             </span>
             <span className="text-neutral-700">—</span>
-            <span className="text-xs text-neutral-400 uppercase tracking-wider">
+            <span className="text-xs text-neutral-400 uppercase tracking-wider font-mono">
               {project.category}
             </span>
           </div>

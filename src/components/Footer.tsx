@@ -56,11 +56,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:yashrajand20@gmail.com"
+                  href="mailto:yashrajanand20@gmail.com"
                   className="text-sm text-neutral-400 hover:text-white transition-colors inline-flex items-center gap-2 group"
                 >
                   <Mail size={14} className="text-neutral-500 group-hover:text-white transition-colors" />
-                  yashrajand20@gmail.com
+                  yashrajanand20@gmail.com
                 </a>
               </li>
               <li>
