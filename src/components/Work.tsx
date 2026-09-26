@@ -9,7 +9,7 @@ const projects = [
       'A modern football academy website designed around player development, competitive training, and a strong athletic identity.',
     url: 'https://apex-football-academy.yashrajan20.workers.dev/',
     displayUrl: 'apex-football-academy.yashrajan20.workers.dev',
-    image: '/apex.webp',
+    image: './apex.webp',
     badge: 'Selected Project 01',
   },
   {
@@ -19,7 +19,7 @@ const projects = [
       'A sophisticated contemporary Indian restaurant website combining editorial presentation, premium visual direction, and a modern dining experience.',
     url: 'https://noir-dining.yashrajan20.workers.dev/',
     displayUrl: 'noir-dining.yashrajan20.workers.dev',
-    image: '/noir.webp',
+    image: './noir.webp',
     badge: 'Selected Project 02',
   },
 ];
