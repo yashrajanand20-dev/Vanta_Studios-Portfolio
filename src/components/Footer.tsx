@@ -32,7 +32,7 @@ export function Footer() {
                 { label: 'Services', href: '#services' },
                 { label: 'Process', href: '#process' },
                 { label: 'About', href: '#about' },
-                { label: 'Start a Project', href: 'mailto:vantastudios98@gmail.com', external: false },
+                { label: 'Start a Project', href: 'https://tally.so/r/445poX', external: true },
               ].map((item) => (
                 <li key={item.label}>
                   <a

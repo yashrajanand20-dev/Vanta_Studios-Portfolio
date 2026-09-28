@@ -47,7 +47,9 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <a
-              href="mailto:vantastudios98@gmail.com"
+              href="https://tally.so/r/445poX"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm font-medium text-white border border-[#2a2a2a] hover:border-[#3a3a3a] px-5 py-2 rounded-full transition-all duration-300 hover:bg-[#111] group"
             >
               Start a Project
@@ -83,7 +85,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="mailto:vantastudios98@gmail.com"
+            href="https://tally.so/r/445poX"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}

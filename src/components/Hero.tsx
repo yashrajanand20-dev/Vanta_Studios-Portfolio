@@ -47,7 +47,9 @@ export function Hero() {
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-up delay-500">
             <a
-              href="mailto:vantastudios98@gmail.com"
+              href="https://tally.so/r/445poX"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary group inline-flex items-center justify-center gap-2 bg-white text-black px-7 py-3.5 rounded-full font-medium text-sm hover:bg-neutral-200 transition-colors"
             >
               Start a Project

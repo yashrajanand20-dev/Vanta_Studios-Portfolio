@@ -72,7 +72,9 @@ export function Contact() {
 
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
                 <a
-                  href="mailto:vantastudios98@gmail.com"
+                  href="https://tally.so/r/445poX"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary group inline-flex items-center justify-center gap-2 bg-white text-black px-7 py-3.5 rounded-full font-medium text-sm hover:bg-neutral-200 transition-colors"
                 >
                   Start a Project
