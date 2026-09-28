@@ -47,9 +47,7 @@ export function Hero() {
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-up delay-500">
             <a
-              href="https://tally.so/r/445poX"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:vantastudios98@gmail.com"
               className="btn-primary group inline-flex items-center justify-center gap-2 bg-white text-black px-7 py-3.5 rounded-full font-medium text-sm hover:bg-neutral-200 transition-colors"
             >
               Start a Project
@@ -64,13 +62,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-6 lg:left-10 hidden md:flex items-center gap-3 animate-fade-in delay-700">
-          <div className="w-px h-10 bg-gradient-to-b from-transparent via-neutral-600 to-transparent" />
-          <span className="text-xs text-neutral-500 tracking-wider uppercase rotate-90 origin-left translate-y-7">
-            Scroll
-          </span>
-        </div>
       </div>
     </section>
   );

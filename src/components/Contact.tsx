@@ -34,10 +34,10 @@ export function Contact() {
               <div className="flex items-center justify-between py-3.5 border-b border-[#1a1a1a]">
                 <span className="text-xs text-neutral-500 uppercase tracking-wider font-mono">Official Email</span>
                 <a
-                  href="mailto:yashrajanand20@gmail.com"
+                  href="mailto:vantastudios98@gmail.com"
                   className="text-sm text-neutral-200 hover:text-white transition-colors"
                 >
-                  yashrajanand20@gmail.com
+                  vantastudios98@gmail.com
                 </a>
               </div>
               <div className="flex items-center justify-between py-3.5 border-b border-[#1a1a1a]">
@@ -72,9 +72,7 @@ export function Contact() {
 
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://tally.so/r/445poX"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:vantastudios98@gmail.com"
                   className="btn-primary group inline-flex items-center justify-center gap-2 bg-white text-black px-7 py-3.5 rounded-full font-medium text-sm hover:bg-neutral-200 transition-colors"
                 >
                   Start a Project
@@ -82,7 +80,7 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="mailto:yashrajanand20@gmail.com"
+                  href="mailto:vantastudios98@gmail.com"
                   className="inline-flex items-center justify-center gap-2 text-sm text-neutral-300 hover:text-white px-6 py-3.5 rounded-full border border-[#2a2a2a] hover:border-[#3a3a3a] transition-all duration-300 hover:bg-[#111]"
                 >
                   <Mail size={15} />

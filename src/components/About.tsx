@@ -31,10 +31,10 @@ export function About() {
               <Mail size={14} className="text-[#7c3aed]" />
               <span>Studio Inquiries:</span>
               <a
-                href="mailto:yashrajanand20@gmail.com"
+                href="mailto:vantastudios98@gmail.com"
                 className="text-neutral-200 hover:text-white transition-colors underline font-medium"
               >
-                yashrajanand20@gmail.com
+                vantastudios98@gmail.com
               </a>
             </div>
           </div>

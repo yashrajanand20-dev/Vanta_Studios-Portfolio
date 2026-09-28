@@ -32,7 +32,7 @@ export function Footer() {
                 { label: 'Services', href: '#services' },
                 { label: 'Process', href: '#process' },
                 { label: 'About', href: '#about' },
-                { label: 'Start a Project', href: 'https://tally.so/r/445poX', external: true },
+                { label: 'Start a Project', href: 'mailto:vantastudios98@gmail.com', external: false },
               ].map((item) => (
                 <li key={item.label}>
                   <a
@@ -56,11 +56,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:yashrajanand20@gmail.com"
+                  href="mailto:vantastudios98@gmail.com"
                   className="text-sm text-neutral-400 hover:text-white transition-colors inline-flex items-center gap-2 group"
                 >
                   <Mail size={14} className="text-neutral-500 group-hover:text-white transition-colors" />
-                  yashrajanand20@gmail.com
+                  vantastudios98@gmail.com
                 </a>
               </li>
               <li>
