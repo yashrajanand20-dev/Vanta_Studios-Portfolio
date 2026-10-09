@@ -11,7 +11,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-5">
             <a href="#top" className="inline-block" aria-label="Vanta Studios home">
-              <Logo />
+              <Logo imgClassName="h-14" />
             </a>
             <p className="mt-6 text-sm text-neutral-400 max-w-sm leading-relaxed">
               A digital studio building premium websites and custom digital

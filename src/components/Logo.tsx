@@ -1,47 +1,27 @@
 interface LogoProps {
-  variant?: 'full' | 'horizontal' | 'icon' | 'wordmark';
+  variant?: 'full' | 'icon';
   className?: string;
   imgClassName?: string;
 }
 
-export function Logo({ variant = 'horizontal', className = '', imgClassName = '' }: LogoProps) {
+export function Logo({ variant = 'full', className = '', imgClassName = '' }: LogoProps) {
   if (variant === 'icon') {
     return (
       <img
         src="./vanta-mark.webp"
         alt="Vanta Studios"
-        className={`h-7 w-auto object-contain ${imgClassName || className}`}
+        className={`h-8 w-auto object-contain ${imgClassName || className}`}
       />
     );
   }
 
-  if (variant === 'wordmark') {
-    return (
-      <img
-        src="./vanta-wordmark.webp"
-        alt="Vanta Studios"
-        className={`h-6 w-auto object-contain ${imgClassName || className}`}
-      />
-    );
-  }
-
-  if (variant === 'full') {
-    return (
-      <img
-        src="./vanta-logo.webp"
-        alt="Vanta Studios"
-        className={`h-12 w-auto object-contain ${imgClassName || className}`}
-      />
-    );
-  }
-
-  // Default: horizontal lockup (icon + wordmark)
+  // Official stacked logo: emblem centered directly above the Vanta Studios wordmark
   return (
     <div className={`flex items-center ${className}`}>
       <img
-        src="./vanta-horizontal.webp"
+        src="./vanta-logo.webp"
         alt="Vanta Studios"
-        className={`h-7 w-auto object-contain ${imgClassName}`}
+        className={`h-11 sm:h-12 w-auto object-contain ${imgClassName}`}
       />
     </div>
   );
